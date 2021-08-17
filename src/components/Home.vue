@@ -300,6 +300,9 @@ export default {
       }
     },
     generateDBLP(name){
+      if (name.indexOf('http') === 0) {
+        return name
+      }
       return 'https://dblp.uni-trier.de/db/conf/' + name
     },
     _isMobile() {

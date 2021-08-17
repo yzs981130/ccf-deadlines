@@ -27,12 +27,12 @@ jobs:
         yarn build
     - name: Config Git
       run: |
-        git config --global user.email "me@4f5da2.com"
-        git config --global user.name "0x4f5da2"
+        git config --global user.email "actions@github.com"
+        git config --global user.name "Github Actions"
     - name: Deploy
       run: |
         cd dist
         git init
         git add --all
         git commit -m "Site Update:`TZ=':Asia/Shanghai' date +' %Y-%m-%d %H:%m:%S'`"
-        git push --force https://${{ secrets.ACCESS_TOKEN }}@github.com/ccfddl/ccfddl.github.io.git master:page
+        git push --force https://${{ secrets.ACCESS_TOKEN }}@github.com/yzs981130/ddl_dist.git
